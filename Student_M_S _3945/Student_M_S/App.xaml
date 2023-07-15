@@ -1,0 +1,280 @@
+﻿<Application x:Class="Student_M_S.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Student_M_S"
+             StartupUri="MainWindow.xaml"
+            >
+    <Application.Resources>
+
+
+
+        <Style x:Key="title text" TargetType="TextBlock">
+
+            <Setter Property="FontSize" Value="20"/>
+
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="White"/>
+
+        </Style>
+
+        <Style x:Key="title text_2ndWindow" TargetType="TextBlock">
+
+            <Setter Property="FontSize" Value="26"/>
+
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+
+        </Style>
+
+        <Style x:Key="normal_Button" TargetType="Button">
+            
+            
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0 0 0 00" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE5CECE"/>
+                        <GradientStop Color="#FF9FA6A7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="Transparent" Padding="10" CornerRadius="16">
+                            <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF3B586F"/>
+                    <Setter Property="Foreground" Value="White"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Transparent"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+
+
+
+        </Style>
+        
+        
+
+
+
+
+        <Style x:Key="mainWindowButton" TargetType="Button">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0 0 0 00" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE5CECE"/>
+                        <GradientStop Color="#FF9FA6A7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            
+            
+
+
+            
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="White" Padding="10" CornerRadius="16">
+                            <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF79C6C3"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF106F84" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ListView" TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="4 "/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black" />
+           
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="80"/>
+
+
+
+        </Style>
+        <Style x:Key="Normal Text" TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="10 "/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FFDAC6C6" />
+
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="80"/>
+
+
+
+        </Style>
+
+
+
+        <Style x:Key="AddProfileButton" TargetType="Button">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0 0 0 00" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE5CECE"/>
+                        <GradientStop Color="#FF9FA6A7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="White" Padding="10" CornerRadius="16">
+                            <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF79C6C3"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF106F84" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        
+        <Style x:Key="SaveeButton" TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0 0 0 00" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE5CECE"/>
+                        <GradientStop Color="#FF9FA6A7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            
+
+
+
+
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="White" Padding="10" CornerRadius="16">
+                            <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF3E5653"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF106F84" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+
+
+
+
+    </Application.Resources>
+</Application>
